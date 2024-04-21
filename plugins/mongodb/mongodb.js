@@ -21,8 +21,9 @@ if (!MONGODB_HOST) {
     }
     // Add server url
     mongoUrl += `${MONGODB_HOST}:${MONGODB_PORT}/${MONGODB_DBNAME}`
+    console.log(mongoUrl)
     console.log(`Connecting to mongodb://${MONGODB_HOST}:${MONGODB_PORT}/${MONGODB_DBNAME}`)
 
-    mongoose.connect(mongoUrl).catch((error) => logger.error(error));
+    mongoose.connect(mongoUrl).catch((error) => console.log(error));
     
 }

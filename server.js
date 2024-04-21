@@ -6,6 +6,7 @@ const morgan =require('morgan')
 if (process.env.DEPLOAY_MODE == "false") app.use(morgan('dev')) //顯示請求資訊
 
 const {mongodb}=require('./plugins/mongodb/mongodb')
+const {test}=require('./models/mongodb/test')
 //更新指令集
 const DEPLOY=require("./deploy")
 // DEPLOY();
